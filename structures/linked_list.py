@@ -84,6 +84,12 @@ class LinkedList:
         for i in self.__iter__():
             print(i)
 
+    def to_array(self):
+        out = []
+        for i in self.__iter__():
+            out.append(i)
+        return out
+
     def return_and_remove_tail(self):
         node = self.head_node
         if node == self.last_node:
@@ -101,13 +107,13 @@ class LinkedList:
                     return ret_val
                 else:
                     node = node.next_val
-
-
-if __name__ == "__main__":
-    l_list = LinkedList()
-    l_list.add_node_to_end("second")
-    l_list.add_node_to_end("third")
-    l_list.add_node_to_end("fourth")
-    print(l_list.return_and_remove_tail())
-    print("***")
-    l_list.print_list()
+#
+#
+# if __name__ == "__main__":
+#     l_list = LinkedList()
+#     l_list.add_node_to_end("second")
+#     l_list.add_node_to_end("third")
+#     l_list.add_node_to_end("fourth")
+#     print(l_list.return_and_remove_tail())
+#     print("***")
+#     l_list.print_list()

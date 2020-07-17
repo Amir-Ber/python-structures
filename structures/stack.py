@@ -22,4 +22,16 @@ class Stack:
 
     def end_stack_pop(self):
         self.size -= 1
+        # if self.size > 0:
         return self.data_list.return_and_remove_tail()
+        # else:
+        #     return None
+
+    def print_stack(self):
+        self.data_list.print_list()
+
+    def to_array(self):
+        return self.data_list.to_array()
+
+    def __sizeof__(self):
+        return self.size
